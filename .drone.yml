@@ -1,0 +1,7 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: affixxx/drone-rb
+    tags:
+      - latest
+      - 2.5.1

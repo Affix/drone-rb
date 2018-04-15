@@ -1,7 +1,7 @@
 FROM ruby:2.5.1-alpine
 MAINTAINER Keiran Smith <opensource@keiran.scot>
 
-ENV BUILD_PACKAGES curl-dev build-base bash
+ENV BUILD_PACKAGES curl-dev build-base bash sqlite sqlite-dev sqlite-libs
 ENV RUBY_PACKAGES cairo-dev tzdata wget
 ENV WKHTMLTOPDF_PACKAGES gtk+ glib ttf-freefont fontconfig dbus
 
@@ -26,3 +26,5 @@ ENV LANGUAGE=en_US.UTF-8
 
 RUN gem install bundler --no-ri --no-rdoc
 RUN npm install -g yarn
+
+RUN gem install sqlite3
