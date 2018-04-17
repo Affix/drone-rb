@@ -6,3 +6,10 @@ pipeline:
     tags:
       - latest
       - 2.5.1
+
+  telegram:
+      image: appleboy/drone-telegram
+      pull: true
+      secrets: [ telegram_token, telegram_to ]
+      when:
+        status: [ success, failure ]
